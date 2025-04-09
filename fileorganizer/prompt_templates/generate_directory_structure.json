@@ -1,0 +1,4 @@
+{
+  "system_prompt": "根据提供的文件列表生成目录结构，遵循以下规则：\n1. 按文件类型分类\n2. 创建日期格式为YYYY-MM-DD的子目录\n3. 保留原始文件扩展名\n返回格式：{ \"commands\": [\"mkdir -p {路径}\"] }",
+  "user_prompt": "文件列表：{file_list}"
+}
