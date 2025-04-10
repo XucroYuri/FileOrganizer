@@ -50,7 +50,11 @@ def main():
     # 添加LLM配置初始化
     llm_config = LLMConfig(
         provider=args.llm_provider,
-        _api_key=args.llm_api_key or getpass.getpass('请输入API密钥: ') if not args.test_mode else 'sk-cefbdbc8fcfa4d05be9c8f480f602df6',
+        # 将以下行：
+        _api_key=args.llm_api_key or getpass.getpass('请输入API密钥: ') if not args.test_mode else 'sk-cefbdbc8fcfa4d05be9c8f480f602df6'
+        
+        # 修改为：
+        _api_key=args.llm_api_key or getpass.getpass('请输入API密钥: ') if not args.test_mode else 'your-test-key-here'
         model_name=args.llm_model
     )
     try:
