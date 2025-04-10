@@ -41,7 +41,7 @@ def main():
     from fileorganizer.config.llm_config import LLMConfig
     llm_config = LLMConfig(
         provider=args.llm_provider,
-        _api_key=args.llm_api_key or getpass.getpass('请输入API密钥: ') if not args.test_mode else 'sk-cefbdbc8fcfa4d05be9c8f480f602df6',
+        _api_key=args.llm_api_key or getpass.getpass('请输入API密钥: ') if not args.test_mode else 'your-test-api-key-here',
         model_name=args.llm_model
     )
     try:

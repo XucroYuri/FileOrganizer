@@ -53,9 +53,6 @@ class FileOrganizer:
             raise ValueError(f"源目录不存在: {self.source_dir}")
         if not self.dest_dir.exists() and not dry_run:  # dry_run时不强制目标目录存在
             raise ValueError(f"目标目录不存在: {self.dest_dir}")
-        
-        self.source_dir = Path(source_dir)
-        self.dest_dir = Path(dest_dir)
         self.batch_size = batch_size
         self.batch_delay = batch_delay
         self.dry_run = dry_run
